@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>５ちゃんねる</title>
+    <link rel="stylesheet" href="//5ch.net/css/css/font-awesome.min.css">
+    <link href="//5ch.net/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//5ch.net/css/5ch.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <script type=text/javascript src='//i2ad.jp/i/iVCCp0kwKCl4/sync'></script>
+</head>
+
+<body class="ch5-body ">
+<nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img id="rabbit-img1" src="//5ch.net/images/rabbit.png">
+            <img id="ch_logo" src="//5ch.net/images/5ch_logo.png" alt="５ちゃんねる" align="middle" border="0">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            <div class="form-group has-search">
+            <span class="fa fa-search form-control-feedback"></span>
+            <input id="search_input" type="text" class="form-control" placeholder="スレッドタイトル検索">
+            </div>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link" href="/_login" title="" data-toggle="popover" data-placement="bottom" data-content="ここからBEアカウントでログインすると、フロントページのすべての機能を楽しめます! 詳細については<a href='https://5ch.net/faq.html'>FAQ</a>をご覧ください。"><i class="fa fa-sign-in"></i> ログイン</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="//www2.5ch.net/5ch.html">掲示板</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="//itest.5ch.net/">スマホ版</a>
+            </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="sub-nav">
+    <div class="container">
+        <div id="under_header">
+        <span class="public_nav">
+        <span class="menu_item"><a href="/" title="ホーム">[ホーム]</a></span>
+        <span class="menu_item"><a href="/faq.html" title="新フロントページについてのよくある質問">[FAQ]</a></span>
+        <span class="menu_item"><a href="https://bintan.me/">[びんたん]</a></span>
+        <span class="menu_item"><a href="javascript:void(0)" id="clear_hide_posts" title="Clear hidden posts">[クリア]</a></span>
+        <span class="menu_item"><a href="javascript:void(0)" id="filter_posts" title="Filter posts">[フィルタ]</a></span>
+        </span>
+        <div class="btn-group sortby-dropdown">
+        </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+<div id="myModal" class="modal">
+<div class="modal-content">
+<p>
+<span class="close">&times;</span>
+キーワードを入れる: <input type="text" id="filter_keyword" name="fkeyword" minlength="3" maxlength="32" class="form-control" placeholder="キーワード"></p>
+<input class="btn btn-lg btn-primary btn-block" id="filter_add" type="button" value="追加">
+<div align="center" class="filter_keywords_list_box">
+<span class="filter_keywords_item">
+<a href="javascript:void(0)" class="filter_keywords_list_button">[リスト表示]</a>
+<a href="javascript:void(0)" class="filter_keywords_clear_all_button">[フィルタをクリア]</a>
+<a href="javascript:void(0)" class="filter_keywords_refresh_page_button">[ページの更新]</a>
+</span>
+<span class="filter_keywords_item" id="filter_keywords_list"></span>
+</div>
+</div>
+</div>
+</div>
+<div id="main-content-box">
+<div class="container">
+<div class="row">
+<div class="col-lg-8">
+<div class="leader hidden" id="js-to-itest">
+<div class="post-item-box text-center">
+<a href="https://itest.5ch.net/">[5ちゃんねる スマートフォン版はこちら]</a>
+</div>
+</div>
+<div class="post-item-box">
+<div class="thread-main-box">
+<ul class="threadlist" id="thread_list_posts">
+<li class="newsplus-20230131162441969 thread " data-board="newsplus" data-board-threadid="newsplus-20230131162441969">
+<div class="thread_link">
+<div class="thread_box thread_box-left text-center">
+</div>
+<div class="thread_box thread_box-right">
+<div class="public_nav" align="right">
+<div class="post_nav_buttons">
+<a title="隠す" class="hide_post" href="javascript:void(0)">[隠す]</a>
+</div>
+</div>
+<div class="thread_box_wrap">
+<img class="thread_box_wrap_thumbnail" src="./images/boards/newsplus.jpg">
+</div>
+<div class="thread_title">
+<a href="https://asahi.5ch.net/test/read.cgi/newsplus/1675149881" rel="nofollow noopener" target="_blank">【労働】長時間かつ低賃金なのに熱心に働く…外国人が「なぜ日本人は上司を襲撃しないのか」と疑問に思うワケ [おっさん友の会★]</a>
+</div>
+<div class="thread-content fade-buttom-thread-content"><p title="クリックして展開する" class="full-content"> 日本人の働き方は外国人の目にどう映っているのか。イギリス在住で著述家の谷本真由美さんは <br> 「日本人は、ほかの先進国よりもひどい環境と安い給料で働かされている。解決策が明らかなのに <br> なぜ今の環境で耐えているのか、不思議に思っている外国人が多い」という——。 <br> <br> ■なぜ日本人は上司や経営者を襲撃しないのか <br> 　外国人が日本人に対して疑問に思うことのひとつに、日本人はひどい就労環境であっても <br> 、なぜか上司や経営者を襲撃しないということがあります。 <br> 　他の国は一般的に気性が激しい人が多いので、就労環境があまりにもひどいと夜暗いところで <br> 待ち伏せをして後ろから殴りつけるとか、ひどい場合は銃撃してしまいます。 <br> <br> 　直接暴力を振るうのがヤバいなと思う人々は、職場でわざと仕事をやらないとか工場などの <br> 生産業務で欠陥品を大量に入れるとか、お客が怒るように仕向けるなどありとあらゆる手段を駆使して上司に <br> 復讐を果たします。頭が良い人間ほど複雑な復讐の仕掛けを講じるのでたいへん恐ろしいのです。 <br> <br> ■Twitter社が解雇者のアクセスを遮断したワケ <br> 　2022年11月には「Twitter」が従業員の50％にあたる3500人を突然解雇しました。解雇者にはメールでの <br> 事前通知すらなく、リモートワーク用のノートパソコンや業務用スマートフォン、メールなどが突然ロックされたり <br> 社内システムに入れなくなったり、オフィスから突然退去させられた人が大半でした。 <br> <br> 　これも従業員によるデータの持ち出しや秘密の漏洩、会社や他の従業員へ物理的に危害を加えることを防ぐためです。 <br> とくにアメリカは銃を所持できるので、幹部や経営者は解雇された従業員に襲われて死ぬ可能性があります。 <br> <br> 　さらには解雇された人のノートパソコンやスマートフォン、業務システムからは即データを消す仕組みに <br> なっている企業も多数あります。ですから企業側からの集中的なデータアクセスを制御できるシンクライアント <br> という仕組みのノートパソコンや、データセンターにおいてあるデータにアクセスする仕組みのクラウドが普及しているのです。 <br> <br> つづきはそーすで <br> ヤフーニュース（プレジデントオンライン）1/31(火) 9:17配信 <br> <a rel="nofollow noopener" href="https://jump.5ch.net/?https://news.yahoo.co.jp/articles/7e2e1d68a4c6c76c7b12a8f4feaa47cbb02c1d09" target="_blank">https://news.yahoo.co.jp/articles/7e2e1d68a4c6c76c7b12a8f4feaa47cbb02c1d09</a> </p></div>
+<div class="poster_info">
+<span class="name">おっさん友の会 ★</span> <span class="date">2023/01/31(火) 16:24:41.96 ID:yTKBZPxQ9</span>
+</div>
+<div class="thread_detail text-right">
+<span class="thread_detail_child" title="Comment"><a href="https://asahi.5ch.net/test/read.cgi/newsplus/1675149881"><span class="fa fa-comment"></span> <span class="thread_detail_child_value">17</span></a></span>
+<span class="thread_detail_child"><span class="thread_detail_child_value"><a href="https://asahi.5ch.net/newsplus/">ニュース速報+</a></span></span>
+<span class="thread_detail_child" title="パワ"><span class="fa fa-flash"></span> <span class="thread_detail_child_value">2093</span></span>
+<span class="thread_detail_child" title="板をフォローする"><button data-boardid="newsplus" type="button" class="btn btn-info btn-sm follow-button">フォローする</button></span>
+<span class="thread_detail_child" title="ban be user"></span>
+</div>
+</div>
+</div>
+</li>
+<li class='ads_conten_main' style="padding-top:15px"><li><li class="newsplus-20230131160915929 thread " data-board="newsplus" data-board-threadid="newsplus-20230131160915929">
+<div class="thread_link">
+<div class="thread_box thread_box-left text-center">
+</div>
+<div class="thread_box thread_box-right">
+<div class="public_nav" align="right">
+<div class="post_nav_buttons">
+<a title="隠す" class="hide_post" href="javascript:void(0)">[隠す]</a>
+</div>
+</div>
+<div class="thread_box_wrap">
+<img class="thread_box_wrap_thumbnail" src="./images/boards/newsplus.jpg">
+</div>
+<div class="thread_title">
+<a href="https://asahi.5ch.net/test/read.cgi/newsplus/1675148955" rel="nofollow noopener" target="_blank">【東京】「４０万払え」「帰れないぞ」こめかみに割りばし突き付け 脅迫3時間半　暴力団員をみかじめ料要求で逮捕 [おっさん友の会★]</a>
+</div>
+<div class="thread-content fade-buttom-thread-content"><p title="クリックして展開する" class="full-content"> 東京・歌舞伎町の飲食店で、「俺たちがヤクザと知っているよな」などと言って <br> 経営者の男性らから、みかじめ料を脅し取ろうとした疑いで、暴力団員の男3人が逮捕された。 <br> <br> <br> 「俺がヤクザだと知っているよな」 <br> 指定暴力団・住吉会系組員の首藤翔平容疑者（32）ら3人は、去年7月1日夜、新宿区歌舞伎町1丁目の <br> 居酒屋で、経営者の男性ら2人から、みかじめ料として合わせて80万円を脅し取ろうとした疑いがもたれている。 <br> <br> みかじめ料とは、「用心棒代」「地代」などと称して、暴力団員らが、いわゆる縄張り内の飲食店・風俗店など <br> に要求する金銭のこと。 <br> <br> この日、首藤容疑者らは、いきなり店に現れ、経営者の男性らに対して、「そこに座れ」と告げたという。 <br> そして、「なぜ新しい店長に、店を任せることを言わないのか」「俺がヤクザだと知っているよな。 <br> 勝手なことをしない方がいい」などと難癖をつけたという。 <br> <br> 3時間半続いた”脅迫” <br> さらに、首藤容疑者らは、被害者のこめかみに割りばしで突きつけるなどして <br> 「店舗使用料の40万円を俺たちに払え」と脅したそうだ。 <br> <br> しかし、脅迫は、それでは終わらなかった。首藤容疑者らは、経営者の男性ら2人を連れて <br> 別の居酒屋に移動。「店舗使用料が2つで80万円だ。金を払わなければ、きょうは帰れないぞ」などと迫ったという。 <br> <br> 首藤容疑者らの執拗な脅迫は、午後9時過ぎから、日付が変わるまで、およそ3時間半も続いたという。 <br> この間、暴力団員の風の男たちが、店の周りをうろつき、被害者を付けまわし、威圧していたとのこと。 <br> <br> つづきはソースで <br> ヤフーニュース　（FNNプライムオンライン）　1/31(火) 11:31配信 <br> <a rel="nofollow noopener" href="https://jump.5ch.net/?https://news.yahoo.co.jp/articles/19dcc68f9c2f000aad1456a66b7e62203086df0a" target="_blank">https://news.yahoo.co.jp/articles/19dcc68f9c2f000aad1456a66b7e62203086df0a</a> </p></div>
+<div class="poster_info">
+<span class="name">おっさん友の会 ★</span> <span class="date">2023/01/31(火) 16:09:15.92 ID:yTKBZPxQ9</span>
+</div>
+<div class="thread_detail text-right">
+<span class="thread_detail_child" title="Comment"><a href="https://asahi.5ch.net/test/read.cgi/newsplus/1675148955"><span class="fa fa-comment"></span> <span class="thread_detail_child_value">20</span></a></span>
+<span class="thread_detail_child"><span class="thread_detail_child_value"><a href="https://asahi.5ch.net/newsplus/">ニュース速報+</a></span></span>
+<span class="thread_detail_child" title="パワ"><span class="fa fa-flash"></span> <span class="thread_detail_child_value">2973</span></span>
+<span class="thread_detail_child" title="板をフォローする"><button data-boardid="newsplus" type="button" class="btn btn-info btn-sm follow-button">フォローする</button></span>
+<span class="thread_detail_child" title="ban be user"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="newsplus-20230131155943729 thread " data-board="newsplus" data-board-threadid="newsplus-20230131155943729">
+<div class="thread_link">
+<div class="thread_box thread_box-left text-center">
+</div>
+<div class="thread_box thread_box-right">
+<div class="public_nav" align="right">
+<div class="post_nav_buttons">
+<a title="隠す" class="hide_post" href="javascript:void(0)">[隠す]</a>
+</div>
+</div>
+<div class="thread_box_wrap">
+<img class="thread_box_wrap_thumbnail" src="./images/boards/newsplus.jpg">
+</div>
+<div class="thread_title">
+<a href="https://asahi.5ch.net/test/read.cgi/newsplus/1675148383" rel="nofollow noopener" target="_blank">【北海道】「車検証」の原本がなくコピーだけで車を運転…単独事故を起こし発覚　運転手の57歳の男を逮捕 [おっさん友の会★]</a>
+</div>
+<div class="thread-content fade-buttom-thread-content"><p title="クリックして展開する" class="full-content"> 北海道オホーツク地方の佐呂間町内で乗用車を運転中に単独事故を起こした57歳の男が <br> 車検証を備え付けていなかったとして逮捕されました。 <br> <br> 　道路運送車両法違反の疑いで逮捕されたのは札幌市豊平区に住む内装工の57歳の男です。 <br> <br> 　男は1月30日午前9時20分ごろ、佐呂間町内の道道103号線を乗用車で市街地方向に走行中 <br> 単独事故を起こしたため警察が男の車検証を調べたところ、車検証の写しがあるだけで原本が <br> 備え付けられていませんでした。 <br> <br> 　男の乗用車には同乗者はなく事故によるケガ人はいませんでした。 <br> <br> 　警察のその後の調べで、男の乗っていた乗用車の車検有効期限は1年を切っている状態で <br> あることがデータ上に記録されていることがわかりました。 <br> <br> 　警察は関係機関から書類を取り寄せるなどして、さらに詳しく調べています。 <br> <br> 　警察は男の認否を明らかにしていませんが、調べに対し男はあいまいな供述を繰り返しているということです。 <br> <br> ヤフーニュース　（北海道UHB）　1/31(火) 13:15配信 <br> <a rel="nofollow noopener" href="https://jump.5ch.net/?https://news.yahoo.co.jp/articles/1e596c2f52318d952514d0749d3959bd86dda27e" target="_blank">https://news.yahoo.co.jp/articles/1e596c2f52318d952514d0749d3959bd86dda27e</a> </p></div>
+<div class="poster_info">
+<span class="name">おっさん友の会 ★</span> <span class="date">2023/01/31(火) 15:59:43.72 ID:yTKBZPxQ9</span>
+</div>
+<div class="thread_detail text-right">
+<span class="thread_detail_child" title="Comment"><a href="https://asahi.5ch.net/test/read.cgi/newsplus/1675148383"><span class="fa fa-comment"></span> <span class="thread_detail_child_value">14</span></a></span>
+<span class="thread_detail_child"><span class="thread_detail_child_value"><a href="https://asahi.5ch.net/newsplus/">ニュース速報+</a></span></span>
+<span class="thread_detail_child" title="パワ"><span class="fa fa-flash"></span> <span class="thread_detail_child_value">1897</span></span>
+<span class="thread_detail_child" title="板をフォローする"><button data-boardid="newsplus" type="button" class="btn btn-info btn-sm follow-button">フォローする</button></span>
+<span class="thread_detail_child" title="ban be user"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="newsplus-20230131155955956749 thread " data-board="newsplus" data-board-threadid="newsplus-20230131155955956749">
+<div class="thread_link">
+<div class="thread_box thread_box-left text-center">
+</div>
+<div class="thread_box thread_box-right">
+<div class="public_nav" align="right">
+<div class="post_nav_buttons">
+<a title="隠す" class="hide_post" href="javascript:void(0)">[隠す]</a>
+</div>
+</div>
+<div class="thread_box_wrap">
+<img class="thread_box_wrap_thumbnail" src="./images/boards/newsplus.jpg">
+</div>
+<div class="thread_title">
+<a href="https://asahi.5ch.net/test/read.cgi/newsplus/1675148395" rel="nofollow noopener" target="_blank">【発がん性】多摩地域のPFAS血液検査、85％の人が「健康被害の恐れ」指標値超える★2 [生玉子★]</a>
+</div>
+<div class="thread-content fade-buttom-thread-content"><p title="クリックして展開する" class="full-content"> 2023年1月31日 06時00分 <br> <br> 　東京・多摩地域で水道水に利用していた井戸水から発がん性が疑われる有機フッ素化合物（PFAS＝ピーファス）が検出された問題で、住民の血液検査に取り組んでいる市民団体が30日、国分寺市を中心とした87人分の分析結果を発表した。血中濃度が米国で定める指標値を超えた住民は約85％に上り、分析した専門家は「水道水が主な要因ではないか」と指摘した。（松島京太） <br> <br> ◆専門家「水を飲んで体内に蓄積している」 <br> <br> 　調査は、市民団体「多摩地域のPFAS汚染を明らかにする会」と京都大の原田浩二准教授（環境衛生学）が行った。PFASは米軍の泡消火剤に含まれ、全国の米軍基地内や周辺などで高濃度で検出され、問題化している。汚染源は、米軍横田基地（福生市など）との関連も疑われている。 <br> <br> 　今回は、昨年11月から調べている約600人のうち、中間報告として21&#12316;91歳の87人分の結果を明らかにした。血中に含まれる13種類のPFASを分析し、うちPFOS（ピーフォス）、PFOA（ピーフォア）、PFHxS（ピーエフヘクスエス）、PFNA（ピーエフエヌエー）の4種類の結果をまとめた。国内ではPFASの血中濃度に関する基準がないため、海外の指標値を参考に評価した。 <br> <br> 　4種類の合計値で米国の指標値を超過した人は、全体の約85％の74人。特に、国内で製造や輸入が禁止されていないPFHxSの平均値が血液1ミリリットル当たり14.8ナノグラムで、環境省が2021年に全国の約120人を対象に実施した調査と比べ、約15倍の高さだった。指標値を超える人が多くなった大きな要因になった。 <br> <br> 　また、PFOSとPFOAをそれぞれ対象としたドイツの指標値では、PFOSでは約24％の21人、PFOAでは約7％の6人が超えた。 <br> <br> 全文はソースでご確認ください。 <br> <a rel="nofollow noopener" href="https://jump.5ch.net/?https://www.tokyo-np.co.jp/article/228317" target="_blank">https://www.tokyo-np.co.jp/article/228317</a> <br> <br> 前スレ <br> 【発がん性】多摩地域のPFAS血液検査、85％の人が「健康被害の恐れ」指標値超える <br> <a rel="nofollow noopener" href="https://asahi.5ch.net/test/read.cgi/newsplus/1675136619/" target="_blank">https://asahi.5ch.net/test/read.cgi/newsplus/1675136619/</a> </p></div>
+<div class="poster_info">
+<span class="name">生玉子 ★</span> <span class="date">2023/01/31(火) 15:59:55.95 ID:ubH6Nz749</span>
+</div>
+<div class="thread_detail text-right">
+<span class="thread_detail_child" title="Comment"><a href="https://asahi.5ch.net/test/read.cgi/newsplus/1675148395"><span class="fa fa-comment"></span> <span class="thread_detail_child_value">19</span></a></span>
+<span class="thread_detail_child"><span class="thread_detail_child_value"><a href="https://asahi.5ch.net/newsplus/">ニュース速報+</a></span></span>
+<span class="thread_detail_child" title="パワ"><span class="fa fa-flash"></span> <span class="thread_detail_child_value">3044</span></span>
+<span class="thread_detail_child" title="板をフォローする"><button data-boardid="newsplus" type="button" class="btn btn-info btn-sm follow-button">フォローする</button></span>
+<span class="thread_detail_child" title="ban be user"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="newsplus-20230131155404409 thread " data-board="newsplus" data-board-threadid="newsplus-20230131155404409">
+<div class="thread_link">
+<div class="thread_box thread_box-left text-center">
+</div>
+<div class="thread_box thread_box-right">
+<div class="public_nav" align="right">
+<div class="post_nav_buttons">
+<a title="隠す" class="hide_post" href="javascript:void(0)">[隠す]</a>
+</div>
+</div>
+<div class="thread_box_wrap">
+<img class="thread_box_wrap_thumbnail" src="./images/boards/newsplus.jpg">
+</div>
+<div class="thread_title">
+<a href="https://asahi.5ch.net/test/read.cgi/newsplus/1675148044" rel="nofollow noopener" target="_blank">東京都・小池都知事、NPOと連携で子供政策連携に30億円税金投入、多文化共生も [おっさん友の会★]</a>
+</div>
+<div class="thread-content fade-buttom-thread-content"><p title="クリックして展開する" class="full-content"> 小池百合子氏が知事を務める東京都は、「チルドレンファースト」の社会の実現を目指し、子供政策連携室が実施する <br> 多文化共生政策を含む子供政策の連携推進として、前年から約8倍に予算を増強した、30億5,753万円を投入する。 <br> <br> 子供政策連携室が作成した令和5年度予算要求概要によると、令和5年度の子供政策の連携推進の見積額が <br> 30億5,753万円となっていた。令和4年度予算額が4億2,959万円であったため、約8倍に増強されている。 <br> <br> 子供政策の連携推進として実施されるのは、 <br> 【長期戦略プロジェクトの推進】 <br> 【こども未来会議】 <br> 【「東京都こども基本条例」の理解促進に向けた普及啓発事業】 <br> 【ヤングケアラー】 <br> 【ユースヘルスケア】 <br> 【日本語を母語としない子供 <br> 】【ネウボラ的仕組み】 <br> 【子供目線によるセーフティ・レビュー】 <br> 【子供の笑顔につながる「遊び」の推進】 <br> 【こどもスマイルムーブメント】 <br> 【子供との双方向コミュニケーション・情報発信の強化】 <br> となり、これらの取り組みを実施するにあたっては、区市町村やNPOなどの地域における多様な主体と <br> 協働・連携していくとしている。 <br> <br> 【日本語を母語としない子供】に投入される税金は、1億2,122万円となる。 <br> 取組強化の方向としては、「一人ひとりの実情に寄り添った多面的な支援」となる。 <br> 今後のアクションとしては、「二音後教育・指導の一層の充実」「困りごとや悩みに寄り添う相談体制の強化」 <br> 「子供が集い・交流する居場所の創出」となる。これらのアクションを行うにあたり、NPOなどへの積極支援・連携なども実施する。 <br> <br> アセアンポータル　2023年1月31日 <br> <br> <a rel="nofollow noopener" href="https://jump.5ch.net/?https://portal-worlds.com/news/asean/29900" target="_blank">https://portal-worlds.com/news/asean/29900</a> </p></div>
+<div class="poster_info">
+<span class="name">おっさん友の会 ★</span> <span class="date">2023/01/31(火) 15:54:04.40 ID:yTKBZPxQ9</span>
+</div>
+<div class="thread_detail text-right">
+<span class="thread_detail_child" title="Comment"><a href="https://asahi.5ch.net/test/read.cgi/newsplus/1675148044"><span class="fa fa-comment"></span> <span class="thread_detail_child_value">29</span></a></span>
+<span class="thread_detail_child"><span class="thread_detail_child_value"><a href="https://asahi.5ch.net/newsplus/">ニュース速報+</a></span></span>
+<span class="thread_detail_child" title="パワ"><span class="fa fa-flash"></span> <span class="thread_detail_child_value">7540</span></span>
+<span class="thread_detail_child" title="板をフォローする"><button data-boardid="newsplus" type="button" class="btn btn-info btn-sm follow-button">フォローする</button></span>
+<span class="thread_detail_child" title="ban be user"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="newsplus-20230131155103149 thread " data-board="newsplus" data-board-threadid="newsplus-20230131155103149">
+<div class="thread_link">
+<div class="thread_box thread_box-left text-center">
+</div>
+<div class="thread_box thread_box-right">
+<div class="public_nav" align="right">
+<div class="post_nav_buttons">
+<a title="隠す" class="hide_post" href="javascript:void(0)">[隠す]</a>
+</div>
+</div>
+<div class="thread_box_wrap">
+<img class="thread_box_wrap_thumbnail" src="./images/boards/newsplus.jpg">
+</div>
+<div class="thread_title">
+<a href="https://asahi.5ch.net/test/read.cgi/newsplus/1675147863" rel="nofollow noopener" target="_blank">閣僚9人、岸田首相の長男・翔太郎秘書官から土産受け取る 　中身は「プライベート」★3 [Hitzeschleier★]</a>
+</div>
+<div class="thread-content fade-buttom-thread-content"><p title="クリックして展開する" class="full-content"> <a rel="nofollow noopener" href="https://jump.5ch.net/?https://www.asahi.com/sp/articles/ASR103DQQR10ULFA00B.html" target="_blank">https://www.asahi.com/sp/articles/ASR103DQQR10ULFA00B.html</a> <br> <br> 　岸田文雄首相の長男で政務秘書官を務める翔太郎氏が欧米歴訪時に英国の高級百貨店「ハロッズ」で購入した土産を巡り、31日午前の閣議後会見で閣僚9人が土産を受け取ったと明かした。いずれも土産の中身は「プライベートに関すること」などとして、回答を避けた。 <br> <br> <br> 　土産を受け取ったと答えたのは、永岡桂子文部科学相、加藤勝信厚生労働相、西村康稔経済産業相、斉藤鉄夫国土交通相、松野博一官房長官、河野太郎デジタル相、谷公一国家公安委員長、小倉将信こども政策担当相、高市早苗経済安全保障相の9人。斎藤健法相は「法務行政に関する事柄ではないのでお答えは差し控えたい」。鈴木俊一財務相は「まだ確認していない」と述べた。後藤茂之経済再生相は「プライベートなことなのでお答えは差し控える」と、受け取ったかどうかも含め明言を避けた。閣僚は首相を除き19人いるが、このうち土産の質問を受けたのは12人。 <br> <br> 　中身について、河野氏は「他の閣僚が何をいただいているかわかりませんから、私が何をと言うのはちょっと避けたい」。高市氏は「内容を言ったら、角が立っちゃうんじゃないでしょうか」と言及を避けた。谷氏は「通常国会の開会前に総理からいただいたが、欧米歴訪のお土産かはよくわからない」と答えた。 <br> <br> 前スレ <br> <a rel="nofollow noopener" href="https://asahi.5ch.net/test/read.cgi/newsplus/1675138461/" target="_blank">https://asahi.5ch.net/test/read.cgi/newsplus/1675138461/</a> </p></div>
+<div class="poster_info">
+<span class="name">Hitzeschleier ★</span> <span class="date">2023/01/31(火) 15:51:03.14 ID:DyqGsrho9</span>
+</div>
+<div class="thread_detail text-right">
+<span class="thread_detail_child" title="Comment"><a href="https://asahi.5ch.net/test/read.cgi/newsplus/1675147863"><span class="fa fa-comment"></span> <span class="thread_detail_child_value">12</span></a></span>
+<span class="thread_detail_child"><span class="thread_detail_child_value"><a href="https://asahi.5ch.net/newsplus/">ニュース速報+</a></span></span>
+<span class="thread_detail_child" title="パワ"><span class="fa fa-flash"></span> <span class="thread_detail_child_value">2653</span></span>
+<span class="thread_detail_child" title="板をフォローする"><button data-boardid="newsplus" type="button" class="btn btn-info btn-sm follow-button">フォローする</button></span>
+<span class="thread_detail_child" title="ban be user"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="newsplus-2023013115344007149 thread " data-board="newsplus" data-board-threadid="newsplus-2023013115344007149">
+<div class="thread_link">
+<div class="thread_box thread_box-left text-center">
+</div>
+<div class="thread_box thread_box-right">
+<div class="public_nav" align="right">
+<div class="post_nav_buttons">
+<a title="隠す" class="hide_post" href="javascript:void(0)">[隠す]</a>
+</div>
+</div>
+<div class="thread_box_wrap">
+<img class="thread_box_wrap_thumbnail" src="./images/boards/newsplus.jpg">
+</div>
+<div class="thread_title">
+<a href="https://asahi.5ch.net/test/read.cgi/newsplus/1675146880" rel="nofollow noopener" target="_blank">少子化対策「N分N乗」方式、自民・維新・国民が提案　子ども多いほど税軽減 [蚤の市★]</a>
+</div>
+<div class="thread-content "><p title="クリックして展開する" class="full-content"> 政府の少子化対策を巡り、子どもが多い世帯ほど所得税負担が軽減する「N分N乗」方式への言及が国会で相次いでいる。自民党の茂木敏充幹事長が25日の衆院本会議で紹介した。日本維新の会と国民民主党も26日、岸田文雄首相に提案した。 <br> <br> 「画期的な税制だ」——。茂木氏は25日の代表質問で、先進国の中で高い出生率を誇るフランスが導入しているN分N乗方式についてこう指摘した。 <br> <br> 茂木氏は2022年夏の参院選でもこの...(以下有料版で，残り603文字) <br> <br> 日本経済新聞　2023年1月31日 10:57 <br> <a rel="nofollow noopener" href="https://jump.5ch.net/?https://www.nikkei.com/article/DGXZQOUA3069Q0Q3A130C2000000/" target="_blank">https://www.nikkei.com/article/DGXZQOUA3069Q0Q3A130C2000000/</a> </p></div>
+<div class="poster_info">
+<span class="name">蚤の市 ★</span> <span class="date">2023/01/31(火) 15:34:40.07 ID:+g+Yr1j49</span>
+</div>
+<div class="thread_detail text-right">
+<span class="thread_detail_child" title="Comment"><a href="https://asahi.5ch.net/test/read.cgi/newsplus/1675146880"><span class="fa fa-comment"></span> <span class="thread_detail_child_value">21</span></a></span>
+<span class="thread_detail_child"><span class="thread_detail_child_value"><a href="https://asahi.5ch.net/newsplus/">ニュース速報+</a></span></span>
+<span class="thread_detail_child" title="パワ"><span class="fa fa-flash"></span> <span class="thread_detail_child_value">4952</span></span>
+<span class="thread_detail_child" title="板をフォローする"><button data-boardid="newsplus" type="button" class="btn btn-info btn-sm follow-button">フォローする</button></span>
+<span class="thread_detail_child" title="ban be user"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="newsplus-20230131151438109 thread " data-board="newsplus" data-board-threadid="newsplus-20230131151438109">
+<div class="thread_link">
+<div class="thread_box thread_box-left text-center">
+</div>
+<div class="thread_box thread_box-right">
+<div class="public_nav" align="right">
+<div class="post_nav_buttons">
+<a title="隠す" class="hide_post" href="javascript:void(0)">[隠す]</a>
+</div>
+</div>
+<div class="thread_box_wrap">
+<img class="thread_box_wrap_thumbnail" src="./images/boards/newsplus.jpg">
+</div>
+<div class="thread_title">
+<a href="https://asahi.5ch.net/test/read.cgi/newsplus/1675145678" rel="nofollow noopener" target="_blank">【北海道】包丁突き付け「殺さないからお金出せ」元日のコンビ強盗で58歳男を再逮捕…動機はパチンコと借金 [おっさん友の会★]</a>
+</div>
+<div class="thread-content fade-buttom-thread-content"><p title="クリックして展開する" class="full-content"> 2023年元日に北海道帯広市内のコンビニエンスストアで起きた強盗事件で58歳の男が再逮捕されました。 <br> <br> 　強盗の疑いで再逮捕されたのは帯広市に住む無職の新田博明容疑者です。 <br> <br> 　新田容疑者は1日午後10時ごろ、帯広市東4条西24丁目にあるコンビニエンスストアで <br> 20代の店員に包丁を突きつけ「殺さないからお金出せ」と脅し、現金13万4000円を奪って逃げた疑いがもたれています。 <br> <br> 　警察が防犯カメラの映像を解析し、新田容疑者の容疑が固まったとして31日に再逮捕しました。 <br> <br> 　調べに対して新田容疑者は「パチンコで使用するのと借金があったのでやった」と容疑を認めています。 <br> <br> 　帯広市内では2022年大みそかの夜から2023年1月5日未明にかけてコンビニを狙った強盗未遂事件と <br> 強盗事件が計3件発生していました。 <br> <br> 　このうち5日に帯広市内のコンビニで起きた同様の手口で現金を奪う強盗事件で新田容疑者は逮捕・送検 <br> され「パチンコするためのお金がほしかった」と容疑を認めていました。 <br> <br> 　逮捕当時、新田容疑者は帯広市内のパチンコ屋で発見されていて、自宅からは犯行に使用したと見られる <br> 包丁などの刃物が複数押収されています。 <br> <br> 　残る大みそかの強盗未遂事件についても新田容疑者は関与をほのめかしていて、警察が詳しく調べています。 <br> <br> FNNプライムオンライン　北海道文化放送　2023年1月31日 火曜 午後2:45 <br> <a rel="nofollow noopener" href="https://jump.5ch.net/?https://www.fnn.jp/articles/-/478941" target="_blank">https://www.fnn.jp/articles/-/478941</a> </p></div>
+<div class="poster_info">
+<span class="name">おっさん友の会 ★</span> <span class="date">2023/01/31(火) 15:14:38.10 ID:yTKBZPxQ9</span>
+</div>
+<div class="thread_detail text-right">
+<span class="thread_detail_child" title="Comment"><a href="https://asahi.5ch.net/test/read.cgi/newsplus/1675145678"><span class="fa fa-comment"></span> <span class="thread_detail_child_value">14</span></a></span>
+<span class="thread_detail_child"><span class="thread_detail_child_value"><a href="https://asahi.5ch.net/newsplus/">ニュース速報+</a></span></span>
+<span class="thread_detail_child" title="パワ"><span class="fa fa-flash"></span> <span class="thread_detail_child_value">1881</span></span>
+<span class="thread_detail_child" title="板をフォローする"><button data-boardid="newsplus" type="button" class="btn btn-info btn-sm follow-button">フォローする</button></span>
+<span class="thread_detail_child" title="ban be user"></span>
+</div>
+</div>
+</div>
+</li>
+<li class='ads_conten_main' style="padding-top:15px"><li> </ul>
+</div>
+</div>
+<center>
+<div class="more-posts">
+<a href="javascript:void(0)" id="more_news_index"><h3>もっと見る <span class="glyphicon glyphicon-arrow-down"></span></h3></a>
+<input type="hidden" value="0" id="recent_page">
+<input type="hidden" value="0" id="additional_articles_loaded">
+</div>
+</center>
+</div>
+<div id="content-widget" class="col-md-4">
+<div class="card my-4">
+<div class="card-body">
+<div class="content">
+<div>
+<div class="center-object">
+<a class="navbar-brand" href="/"><img width="150px" src="//5ch.net/images/5ch_mascot_normal.png"></a>
+</div>
+「ハッキング」から「今晩のおかず」までを手広くカバーする巨大掲示板群『５ちゃんねる』へようこそ！ </div>
+</div>
+</div>
+</div>
+<div class="card my-4">
+<div class="card-body">
+<span class="title-widget">インフォメーション</span>
+<hr class="widget-hr">
+<div class="content">
+<ul class="circle-style">
+<li><a href="https://info.5ch.net/">使い方＆注意 </a></li>
+<li><a href="https://premium.5ch.net/">プレミアム浪人 </a></li>
+<li><a href="https://headline.5ch.net/bbynews/">ヘッドライン </a></li>
+<li><a href="https://newsnavi.5ch.net/">ニュース </a></li>
+<li><a href="https://headline.5ch.net/bbynamazu/">地震速報 </a></li>
+<li><a href="https://stat.5ch.net/">投稿数 </a></li>
+<li><a href="https://www.5ch.net/kakolog.html">過去ログ倉庫 </a></li>
+<li><a href="https://qb5.5ch.net/saku2ch/">削除ガイドライン </a></li>
+<li><a href="https://www.5ch.net/matome.html">5chまとめブログ・アプリ運営者の皆さまへ</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sticky_side_point">
+<div class="card my-4">
+<div class="card-body">
+<hr class="widget-hr">
+<div class="content">
+<div class="ads-item">
+</div>
+</div>
+</div>
+</div>
+<div class="card my-4">
+<div class="card-body">
+<div class="content">
+<center>
+Loki Technology, Inc.
+<br>
+29F Joy Nostalg Center
+<br>
+17 ADB Avenue, Ortigas Center
+<br>
+PASIG 1600
+</center>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="py-5 bg-light">
+<div class="container">
+<p class="m-0 text-center text-dark content">
+５ちゃんねるのご利用は利用者各位のご判断にお任せしています｜<br>
+5ch.netにおけるコンテンツの権利はLoki Technology, Inc. に帰属します。<br><br>
+コンテンツの無断複写、転載を禁じます。
+</p>
+</div>
+</footer>
+<script src="//5ch.net/vendor/jquery/jquery.min.js"></script>
+<script src="//5ch.net/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="//5ch.net/js/frontpage-min.js"></script>
+<script src="//5ch.net/js/filter-min.js"></script>
+<script src="./js/ads.js"></script>
+</body>
+</html>

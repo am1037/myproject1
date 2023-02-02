@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="join.css">
+<form action="서버주소">
+    <table class="joinform">
+        <td colspan="2"><h2>회원가입</h2><hr width="80%"></td>
+            <tr></tr>
+        <td>아이디 : </td><td><input type="text"></td>
+            <tr></tr>
+        <td>비밀번호 : </td><td><input type="password"></td>
+            <tr></tr>
+        <td>비밀번호 확인 : </td><td><input type="password"></td>
+            <tr></tr>
+        <td>이름 : </td><td><input type="text" name="name_1"></td>
+            <tr></tr>
+        <td>성별 : </td>
+        <td><!--남녀체크-->남<input type="radio" name="gender">여<input type="radio" name="gender"></td>
+            <tr></tr>
+        <td>취미 : </td>
+        <td><!--체크박스--><input type="text"></td>
+            <tr></tr>
+        <td>전화번호 : </td>
+        <td><!--체크박스 및 번호칸--><select name="phone" id="phone-select">
+        <option value="skt">SKT</option>
+        <option value="kt">KT</option>
+        <option value="lg">LGU+</option></select>
+        <input type="text">
+        <label><input type="checkbox" name="alddul">알뜰폰</label>
+        </td>
+            <tr></tr>
+        <td>생년월일 : </td>
+        <td><!--달력--><input type="date"></td>
+            <tr></tr>
+        <td>하고 싶은 말 : </td>
+        <td><!--커다란 텍스트 박스--><textarea cols="50" rows="10"></textarea></td>
+            <tr></tr>
+        <td colspan="2"></td>
+            <tr></tr>
+        <td colspan="2"><button>정보를 보내자</button></td>
+    </table>
+</form>

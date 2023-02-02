@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function check(){
+            iid = document.getElementById('id2');
+            ppw = document.getElementById('pw2');
+            console.log(ppw.value);
+            if(iid.value=="root"&&ppw.value=="1234"){
+                document.write('정답!!');
+            }
+            else{
+                document.write('땡!!');
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="hi()">인사처리</button>
+    <button onclick="bye()">안녕처리</button>
+    <hr color="red">
+    아이디 : <input type="text" id="id2" value="root"><br>
+    패스워드 : <input type="text" id="pw2" value="1234"><br>
+    <button onclick="check()">로그인 처리</button>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var idChecked = 0; 
+        function idNumCheck(){
+            idCheck = document.getElementById('iidd').value;
+            if(idCheck.length<5) {
+                alert('다섯글자이상이필요해요');
+            }
+            else {
+                alert('괜찮아요');
+                idChecked = 1;            
+            }
+        }
+        function pwCheck(){
+            pw1 = document.getElementsByClassName('pw')[0].value;
+            pw2 = document.getElementsByClassName('pw')[1].value;
+            if(pw1 == pw2){
+                return 1;
+            }
+        }
+        function login(){
+            if(idChecked==1){
+                if(pwCheck()==1)
+                alert('성공!');
+                else{
+                    alert('패스워드가달라요');
+                }
+            }
+            else{
+                console.log('asd');
+                alert('아이디체크를먼저해요');
+            }
+        }
+    </script>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    ID : <input type="text" id="iidd" value=""> <button onclick="idNumCheck()">글자수 확인</button><br>
+    PASSWORD : <input type="text" class="pw" value=""><br>
+    PASSWORD확인 : <input type="text" class="pw" value=""><br>
+    <button onclick="login()">가입해요</button>
+    <div>
+        <!-- <img src="Penguins.jpg" style="border:2,blue" width="30%">
+        <img src="Penguins.jpg" style="border:2,red" width="30%"> -->
+    </div>
+</body>
+</html>
