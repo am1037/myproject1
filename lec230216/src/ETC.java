@@ -1,0 +1,1 @@
+// main이 static인 이유
