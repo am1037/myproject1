@@ -1,0 +1,11 @@
+List : 순서, 중복
+ex)ArrayList
+Queue : 순서
+ex)LinkedList
+Set : 순서x, 중복x
+ex)HashSet
+
+
+Map : 키와 값
+ex)HashMap
+json.. dictionary..
